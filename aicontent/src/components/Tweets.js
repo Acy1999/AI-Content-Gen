@@ -52,12 +52,12 @@ onFormSubmit = e => {
         <br/>
         <h1> Generate Tweets </h1>
         <br/>
-        <h4> Generate Tweets for any type of product. All you need to do is enter the name and a breif overview to get sarted. </h4>
+        <h4> Generate Tweets for anything. All you need to do is enter the content you want to talk about to get sarted. </h4>
         <br/>
         <br/>
         <Form onSubmit={this.onFormSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label> What product would you like us to tweet about?</Form.Label>
+            <Form.Label> What would you like us to tweet about?</Form.Label>
             <Form.Control
                     type="text"
                     name="tweetDescriptor"
