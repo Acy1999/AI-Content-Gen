@@ -20,10 +20,10 @@ onFormSubmit = e => {
   const formData = new FormData(e.target),
   formDataObj = Object.fromEntries(formData.entries())
   console.log(formDataObj.tweetDescriptor)
-
+  console.log(process.env.REACT_APP_OPENAI_API_KEY)
   //////OPENAI
   const configuration = new Configuration({
-    apiKey: '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',
+    apiKey: process.env.REACT_APP_OPENAI_API_KEY,
   });
   const openai = new OpenAIApi(configuration);
 

@@ -23,7 +23,7 @@ onFormSubmit = e => {
 
   //////OPENAI
   const configuration = new Configuration({
-    apiKey: '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',
+    apiKey: process.env.REACT_APP_OPENAI_API_KEY,
   });
   const openai = new OpenAIApi(configuration);
 
