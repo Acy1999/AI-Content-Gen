@@ -61,7 +61,7 @@ onFormSubmit = e => {
             <Form.Control
                     type="text"
                     name="tweetDescriptor"
-                    placeholder="Enter what your Tweet is about."/>
+                    placeholder="Enter what your email is about."/>
             <Form.Text className="text-muted">
               Enter as much information as possible for more accurate Emails.
             </Form.Text>
