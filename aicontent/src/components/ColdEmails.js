@@ -28,7 +28,7 @@ onFormSubmit = e => {
   const openai = new OpenAIApi(configuration);
 
   openai.createCompletion("text-davinci-002", {
-    prompt: `Write a professional email about ${formDataObj.emailDescriptor}.`,
+    prompt: `Write a formatted, professional email about ${formDataObj.emailDescriptor}.`,
     temperature: 0.9,
     max_tokens: 200,
     top_p: 1,
