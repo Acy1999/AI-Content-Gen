@@ -19,7 +19,7 @@ onFormSubmit = e => {
 
   const formData = new FormData(e.target),
   formDataObj = Object.fromEntries(formData.entries())
-  console.log(formDataObj.tweetDescriptor)
+  console.log(formDataObj.enailDescriptor)
   console.log(process.env.REACT_APP_OPENAI_API_KEY)
   //////OPENAI
   const configuration = new Configuration({
