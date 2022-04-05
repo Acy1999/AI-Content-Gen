@@ -60,7 +60,7 @@ onFormSubmit = e => {
             <Form.Label> What would you like us to email about?</Form.Label>
             <Form.Control
                     type="text"
-                    name="tweetDescriptor"
+                    name="emailDescriptor"
                     placeholder="Enter what your email is about."/>
             <Form.Text className="text-muted">
               Enter as much information as possible for more accurate Emails.
