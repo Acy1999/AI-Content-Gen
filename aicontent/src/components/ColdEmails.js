@@ -28,7 +28,7 @@ onFormSubmit = e => {
   const openai = new OpenAIApi(configuration);
 
   openai.createCompletion("text-davinci-002", {
-    prompt: `Write a funny and engaging tweet about ${formDataObj.tweetDescriptor} maybe with hashtags at the end`,
+    prompt: `Write a professional email about ${formDataObj.emailDescriptor}.`,
     temperature: 0.9,
     max_tokens: 200,
     top_p: 1,
@@ -37,7 +37,7 @@ onFormSubmit = e => {
   })
   .then((response) =>{
     this.setState({
-      heading: `AI Tweet Suggestions for: ${formDataObj.tweetDescriptor}`,
+      heading: `Cold email suggestion: ${formDataObj.emailDescriptor}`,
       response: `${response.data.choices[0].text}`
     })
   });
