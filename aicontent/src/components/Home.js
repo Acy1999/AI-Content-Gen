@@ -13,7 +13,7 @@ class Home extends Component {
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src={heroBanner}
+                //src={heroBanner}
                 alt="hero Image" />
             </Carousel.Item>
           </Carousel>
