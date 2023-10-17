@@ -7,6 +7,7 @@ import heroBanner from '../heroBanner1.jpeg'
 class Home extends Component {
   render(){
     return(
+      <body>
       <div>
           <Container>
           <Carousel>
@@ -54,6 +55,7 @@ class Home extends Component {
         <br/>
           </Container>
       </div>
+      </body>
     )
   }
 }
