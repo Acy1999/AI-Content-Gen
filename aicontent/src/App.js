@@ -12,6 +12,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 function App() {
   return (
     <Router>
+      <body>
       <div className="App">
       <Navigation/>
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/tweets" exact element={<Tweets/>} />
         </Routes>
       </div>
+      </body>
     </Router>
 
   );
