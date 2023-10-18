@@ -52,12 +52,15 @@ onFormSubmit = e => {
         <br/>
         <h1 className='hero-h1'> Generate Product Descriptions </h1>
         <br/>
-        <h4 className='hero-p'> Generate product descriptions for any type of product. All you need to do is enter the name and a breif product overview to get sarted. </h4>
+        <h4 className='hero-p'> Create product descriptions for any type of product. All you need to do is enter the name and a breif product overview to get sarted. </h4>
         <br/>
         <br/>
+        <div className='form-content'>
+          <div className='form'>
         <Form onSubmit={this.onFormSubmit}>
           <Form.Group className="hero-p" controlId="formBasicEmail">
             <Form.Label> What product would you like us to describe for?</Form.Label>
+            <br/>
             <Form.Control
                     type="text"
                     name="productName"
@@ -73,7 +76,6 @@ onFormSubmit = e => {
         </Form>
 
         <br/>
-        <br/>
 
         <Card>
           <Card.Body>
@@ -87,12 +89,16 @@ onFormSubmit = e => {
               </Card.Text>
             </Card.Body>
           </Card>
+          </div>
+          </div>
           </Container>
           <br/>
           <br/>
           <br/>
           <br/>
+          
       </div>
+      
     )
   }
 }

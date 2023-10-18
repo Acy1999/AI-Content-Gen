@@ -62,3 +62,15 @@ body{
 .site-name{
   padding-left: 1vh;
 }
+.form-content{
+  align-content: center;
+  background-color: rgba(0,0,0, .25);
+  border-radius: 25px;
+  width: max;
+  padding: auto;
+}
+.form{
+  outline-color: darkgray;
+  outline-width: 2px;
+  padding: 50px;
+}
