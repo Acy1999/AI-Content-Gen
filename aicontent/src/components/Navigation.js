@@ -9,8 +9,8 @@ class Navigation extends Component{
     return(
       <div>
         <Navbar bg="light" variant="light" sticky="top" expand="md" collapseOnSelect>
-        <Navbar.Brand href="/">
-          | Content Generator
+        <Navbar.Brand href="/" className='site-name'>
+          Content Generator
         </Navbar.Brand>
 
         <Navbar.Toggle />
