@@ -4,7 +4,7 @@ import { Container, Form, Button, Card } from 'react-bootstrap'
 
 const { Configuration, OpenAIApi } = require("openai");
 
-class ProductDescription extends Component {
+class InstaCaptions extends Component {
   constructor(){
     super()
     this.state = {
@@ -19,8 +19,8 @@ onFormSubmit = e => {
 
   const formData = new FormData(e.target),
   formDataObj = Object.fromEntries(formData.entries())
-  console.log(formDataObj.productName)
-
+  console.log(formDataObj.photoDescriptor)
+  console.log(process.env.REACT_APP_OPENAI_API_KEY)
   //////OPENAI
   const configuration = new Configuration({
     apiKey: process.env.REACT_APP_OPENAI_API_KEY,
@@ -28,8 +28,8 @@ onFormSubmit = e => {
   const openai = new OpenAIApi(configuration);
 
   openai.createCompletion("text-davinci-002", {
-    prompt: `Write a detailed, smart, informative and professional product description for ${formDataObj.productName}`,
-    temperature: 0.8,
+    prompt: `Write an instagram catption for a photo of ${formDataObj.photoDescriptor} maybe with emojis and hashtags, although emojis and hashtags are not required`,
+    temperature: 0.9,
     max_tokens: 200,
     top_p: 1,
     frequency_penalty: 0,
@@ -37,7 +37,7 @@ onFormSubmit = e => {
   })
   .then((response) =>{
     this.setState({
-      heading: `AI Product Description Suggestions for: ${formDataObj.productName}`,
+      heading: `AI Tweet Suggestions for: ${formDataObj.photoDescriptor}`,
       response: `${response.data.choices[0].text}`
     })
   });
@@ -50,20 +50,20 @@ onFormSubmit = e => {
         <Container>
         <br/>
         <br/>
-        <h1 className='hero-h1'> Generate Product Descriptions </h1>
+        <h1 className='hero-h1'> Generate Captions </h1>
         <br/>
-        <h4 className='hero-p'> Generate product descriptions for any type of product. All you need to do is enter the name and a breif product overview to get sarted. </h4>
+        <h4 className='hero-p'> Generate Instagram Captions for anything. All you need to do is enter the content you want to talk about to get sarted. </h4>
         <br/>
         <br/>
         <Form onSubmit={this.onFormSubmit}>
           <Form.Group className="hero-p" controlId="formBasicEmail">
-            <Form.Label> What product would you like us to describe for?</Form.Label>
+            <Form.Label> What would you like us to tweet about?</Form.Label>
             <Form.Control
                     type="text"
-                    name="productName"
-                    placeholder="Enter Product Name"/>
+                    name="photoDescriptor"
+                    placeholder="Enter a Description of your post."/>
             <Form.Text className="hero-p">
-              Enter as much information as possible for more accurate descriptions.
+              Enter as much information as possible for better captions.
             </Form.Text>
           </Form.Group>
 
@@ -97,4 +97,4 @@ onFormSubmit = e => {
   }
 }
 
-export default ProductDescription
+export default InstaCaptions

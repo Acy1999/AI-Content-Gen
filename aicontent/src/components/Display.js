@@ -9,7 +9,7 @@ class Display extends Component{
 
     return(
       <div>
-      <Card>
+      <Card style={{borderRadius: '25px'}}>
         <Card.Header>{header}</Card.Header>
         <Card.Body>
           <Card.Title>{title}</Card.Title>
@@ -17,7 +17,7 @@ class Display extends Component{
             {text}
           </Card.Text>
           <Nav.Link href={theLink}>
-            <Button variant="primary" size="lg">Get Started</Button>
+            <Button variant="outline-dark" size="lg">Get Started</Button>
           </Nav.Link>
         </Card.Body>
       </Card>

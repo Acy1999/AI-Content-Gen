@@ -50,28 +50,27 @@ class ColdEmails extends Component {
         <Container>
           <br />
           <br />
-          <h1> Generate Emails </h1>
+          <h1 className='hero-h1'> Generate Emails </h1>
           <br />
-          <h4>
-            {" "}
+          <h4 className="hero-p">
             Generate Emails for anything. All you need to do is enter the
-            content you want to talk about to get sarted.{" "}
-          </h4>{" "}
+            content you want to talk about to get sarted.
+          </h4>
           <br />
           <br />
           <Form onSubmit={this.onFormSubmit}>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Group className='hero-p' controlId="formBasicEmail">
               <Form.Label> What would you like us to email about ? </Form.Label>{" "}
               <Form.Control
                 type="text"
                 name="emailDescriptor"
                 placeholder="Enter what your email is about."
               />
-              <Form.Text className="text-muted">
+              <Form.Text className="hero-p">
                 Enter as much information as possible for more accurate Emails.{" "}
               </Form.Text>{" "}
             </Form.Group>
-            <Button variant="primary" size="lg" type="submit">
+            <Button variant="outline-light" size="lg" type="submit">
               Get AI Suggestions{" "}
             </Button>{" "}
           </Form>

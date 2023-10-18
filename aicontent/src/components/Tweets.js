@@ -50,24 +50,24 @@ onFormSubmit = e => {
         <Container>
         <br/>
         <br/>
-        <h1> Generate Tweets </h1>
+        <h1 className='hero-h1'> Generate Tweets </h1>
         <br/>
-        <h4> Generate Tweets for anything. All you need to do is enter the content you want to talk about to get sarted. </h4>
+        <h4 className='hero-p'> Generate Tweets for anything. All you need to do is enter the content you want to talk about to get sarted. </h4>
         <br/>
         <br/>
         <Form onSubmit={this.onFormSubmit}>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Group className="hero-p" controlId="formBasicEmail">
             <Form.Label> What would you like us to tweet about?</Form.Label>
             <Form.Control
                     type="text"
                     name="tweetDescriptor"
                     placeholder="Enter what your Tweet is about."/>
-            <Form.Text className="text-muted">
+            <Form.Text className="hero-p">
               Enter as much information as possible for more accurate Tweets.
             </Form.Text>
           </Form.Group>
 
-          <Button variant="primary" size="lg" type="submit">
+          <Button variant="outline-light" size="lg" type="submit">
             Get AI Suggestions
           </Button>
         </Form>

@@ -8,10 +8,9 @@ class Navigation extends Component{
   render(){
     return(
       <div>
-        <Navbar bg="dark" variant="dark" sticky="top" expand="md" collapseOnSelect>
+        <Navbar bg="light" variant="light" sticky="top" expand="md" collapseOnSelect>
         <Navbar.Brand href="/">
-          <img src={logo} width="50px" />
-          Here is AI
+          | Content Generator
         </Navbar.Brand>
 
         <Navbar.Toggle />
@@ -21,6 +20,7 @@ class Navigation extends Component{
             <Nav.Link href="product-description"> Product Description </Nav.Link>
             <Nav.Link href="cold-emails"> Cold Emails </Nav.Link>
             <Nav.Link href="tweets"> Tweets </Nav.Link>
+            <Nav.Link href="insta-captions"> Instagram Captions </Nav.Link>
           </Nav>
         </Navbar.Collapse>
 
