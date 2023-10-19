@@ -50,21 +50,24 @@ onFormSubmit = e => {
         <Container>
         <br/>
         <br/>
-        <h1 className='hero-h1'> Generate Tweets </h1>
+        <h1 className='hero-h1'> Generate X Posts</h1>
         <br/>
-        <h4 className='hero-p'> Generate Tweets for anything. All you need to do is enter the content you want to talk about to get sarted. </h4>
+        <h4 className='hero-p'> Create Xeets for anything. All you need to do is enter the content you want to talk about to get sarted. </h4>
         <br/>
         <br/>
+        <div className='form-content'>
+          <div className='form'>
         <Form onSubmit={this.onFormSubmit}>
-          <Form.Group className="hero-p" controlId="formBasicEmail">
-            <Form.Label> What would you like us to tweet about?</Form.Label>
+          <Form.Group className="content-header" controlId="formBasicEmail">
+            <Form.Label> What would you like us to Xeet about?</Form.Label>
+            <Form.Text className="content-body">
+              Enter as much information as possible for more accurate X posts.
+            </Form.Text>
             <Form.Control
                     type="text"
                     name="tweetDescriptor"
-                    placeholder="Enter what your Tweet is about."/>
-            <Form.Text className="hero-p">
-              Enter as much information as possible for more accurate Tweets.
-            </Form.Text>
+                    placeholder="Enter what your X post is about."/>
+                    <br/> 
           </Form.Group>
 
           <Button variant="outline-light" size="lg" type="submit">
@@ -74,19 +77,19 @@ onFormSubmit = e => {
 
         <br/>
         <br/>
-
+        <h1 className='content-header'>{this.state.heading}</h1>
         <Card>
           <Card.Body>
-            <Card.Title><h1>{this.state.heading}</h1></Card.Title>
-              <br/>
               <br/>
               <Card.Text>
-                <h4>
+                <h4 className='content-header'>
                 {this.state.response}
                 </h4>
               </Card.Text>
             </Card.Body>
           </Card>
+          </div>
+          </div>
           </Container>
           <br/>
           <br/>
