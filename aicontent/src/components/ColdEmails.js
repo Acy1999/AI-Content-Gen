@@ -29,7 +29,7 @@ class ColdEmails extends Component {
 
     openai
       .createCompletion("text-davinci-002", {
-        prompt: `Write a professional email about ${formDataObj.emailDescriptor}.`,
+        prompt: `Write a professional and formatted email about ${formDataObj.emailDescriptor}.`,
         temperature: 0.9,
         max_tokens: 200,
         top_p: 1,
@@ -58,37 +58,38 @@ class ColdEmails extends Component {
           </h4>
           <br />
           <br />
+          <div className="form-content">
+            <div className="form">
           <Form onSubmit={this.onFormSubmit}>
-            <Form.Group className='hero-p' controlId="formBasicEmail">
+            <Form.Group className='content-header' controlId="formBasicEmail">
               <Form.Label> What would you like us to email about ? </Form.Label>{" "}
+             <br/>
+             <Form.Text className="content-body">
+                Enter as much information as possible for more accurate Emails.{" "}
+              </Form.Text>{" "}
               <Form.Control
                 type="text"
                 name="emailDescriptor"
                 placeholder="Enter what your email is about."
               />
-              <Form.Text className="hero-p">
-                Enter as much information as possible for more accurate Emails.{" "}
-              </Form.Text>{" "}
+              <br/>
             </Form.Group>
             <Button variant="outline-light" size="lg" type="submit">
               Get AI Suggestions{" "}
             </Button>{" "}
           </Form>
           <br />
-          <br />
+          <h1 className="content-header"> {this.state.heading} </h1>
           <Card>
             <Card.Body>
-              <Card.Title>
-                {" "}
-                <h1> {this.state.heading} </h1>
-              </Card.Title>
-              <br />
               <br />
               <Card.Text>
-                <h4> {this.state.response} </h4>{" "}
-              </Card.Text>{" "}
-            </Card.Body>{" "}
+                <h4 className="content-header"> {this.state.response} </h4>{" "}
+              </Card.Text>
+            </Card.Body>
           </Card>
+          </div>
+          </div>
         </Container>
         <br />
         <br />

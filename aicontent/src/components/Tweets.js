@@ -60,6 +60,7 @@ onFormSubmit = e => {
         <Form onSubmit={this.onFormSubmit}>
           <Form.Group className="content-header" controlId="formBasicEmail">
             <Form.Label> What would you like us to Xeet about?</Form.Label>
+            <br/>
             <Form.Text className="content-body">
               Enter as much information as possible for more accurate X posts.
             </Form.Text>
