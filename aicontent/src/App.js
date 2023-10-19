@@ -7,6 +7,7 @@ import ProductDescription from './components/ProductDescription'
 import ColdEmails from './components/ColdEmails'
 import Tweets from './components/Tweets'
 import InstaCaptions from './components/InstagramCaption';
+import Names from './components/Names';
 import './App.css'
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
@@ -23,6 +24,7 @@ function App() {
           <Route path="/insta-captions" exact element={<InstaCaptions/>} />
           <Route path="/cold-emails" exact element={<ColdEmails/>} />
           <Route path="/tweets" exact element={<Tweets/>} />
+          <Route path="/names" exact element={<Names/>} />
         </Routes>
       </div>
     </Router>

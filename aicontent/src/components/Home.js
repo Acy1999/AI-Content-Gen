@@ -1,7 +1,7 @@
 import React from 'react'
 import { Component } from 'react'
 import Display from './Display'
-import { Container, Row, Col, Carousel } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 
 class Home extends Component {
   render(){
@@ -52,9 +52,9 @@ class Home extends Component {
           <Col>
           <Display
             header = "Name Generation"
-            title = "Cold Email Template"
-            text = "This is perfect for marketing agents or companies who need fresh ideas daily on cold email content that is created entirely by AI technology."
-            theLink = "/cold-emails" />
+            title = "AI Name Creation"
+            text = "Stuck in a creative rut? Need a name for something but have writers block? Try our AI Name Generation tool for free! Click below to start."
+            theLink = "/names" />
           </Col>
 
           <Col>

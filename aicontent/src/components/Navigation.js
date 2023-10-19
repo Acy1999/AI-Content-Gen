@@ -21,6 +21,7 @@ class Navigation extends Component{
             <Nav.Link href="cold-emails"> Cold Emails </Nav.Link>
             <Nav.Link href="tweets"> Tweets </Nav.Link>
             <Nav.Link href="insta-captions"> Instagram Captions </Nav.Link>
+            <Nav.Link href="names"> Names </Nav.Link>
           </Nav>
         </Navbar.Collapse>
 
