@@ -58,32 +58,30 @@ onFormSubmit = e => {
         <div className='form-content'>
           <div className='form'>
         <Form onSubmit={this.onFormSubmit}>
-          <Form.Group className="hero-p" controlId="formBasicEmail">
+          <Form.Group className="content-header" controlId="formBasicEmail">
             <Form.Label> What product would you like us to describe for?</Form.Label>
             <br/>
+            <Form.Text className="content-body">
+              Enter as much information as possible for more accurate descriptions.
+            </Form.Text>
             <Form.Control
                     type="text"
                     name="productName"
-                    placeholder="Enter Product Name"/>
-            <Form.Text className="hero-p">
-              Enter as much information as possible for more accurate descriptions.
-            </Form.Text>
+                    placeholder="Enter Product Name"
+                    className="content-body"/>
+                    <br/>
           </Form.Group>
-
           <Button variant="outline-light" size="lg" type="submit">
             Get AI Suggestions
           </Button>
         </Form>
-
         <br/>
-
+        <h1 className='content-header'>{this.state.heading}</h1>
         <Card>
           <Card.Body>
-            <Card.Title><h1>{this.state.heading}</h1></Card.Title>
-              <br/>
               <br/>
               <Card.Text>
-                <h4>
+                <h4 className='content-header'>
                 {this.state.response}
                 </h4>
               </Card.Text>

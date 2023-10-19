@@ -59,18 +59,27 @@ body{
 .hero-p{
   color: white;
 }
+.content-header{
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(106, 106, 106);
+  text-align: left;
+}
+.content-body{
+  font-size: 16px;
+  color:rgb(106, 106, 106);
+  font-weight: lighter;
+}
+.content-body::after{
+  padding-bottom: 2vh;
+}
 .site-name{
   padding-left: 1vh;
 }
 .form-content{
-  align-content: center;
-  background-color: rgba(0,0,0, .25);
+  background-color: rgba(255, 255, 255, 0.35);
   border-radius: 25px;
-  width: max;
-  padding: auto;
-}
-.form{
-  outline-color: darkgray;
+  width: 100%;
+  padding: 2vw 5vw 2vw 5vw;
   outline-width: 2px;
-  padding: 50px;
 }
