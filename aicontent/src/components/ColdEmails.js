@@ -29,7 +29,7 @@ class ColdEmails extends Component {
 
     openai
       .createCompletion("text-davinci-002", {
-        prompt: `Write a professional and formatted email about ${formDataObj.emailDescriptor}.`,
+        prompt: `Write a professional email about ${formDataObj.emailDescriptor} formatted with html line breaks.`,
         temperature: 0.9,
         max_tokens: 200,
         top_p: 1,
