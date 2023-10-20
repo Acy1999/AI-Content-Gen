@@ -77,7 +77,6 @@ onFormSubmit = e => {
         </Form>
 
         <br/>
-        <br/>
         <h1 className='content-header'>{this.state.heading}</h1>
         <Card>
           <Card.Body>
