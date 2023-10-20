@@ -37,7 +37,7 @@ onFormSubmit = e => {
   })
   .then((response) =>{
     this.setState({
-      heading: `AI Tweet Suggestions for: ${formDataObj.photoDescriptor}`,
+      heading: `AI Caption Suggestions for: ${formDataObj.photoDescriptor}`,
       response: `${response.data.choices[0].text}`
     })
   });
