@@ -27,7 +27,7 @@ onFormSubmit = e => {
   });
   const openai = new OpenAIApi(configuration);
 
-  openai.createCompletion("text-embedding-ada-002", {
+  openai.createCompletion("gpt-3.5-turbo-0613", {
     prompt: `Write a detailed, smart, informative and professional product description for ${formDataObj.productName}`,
     temperature: 0.8,
     max_tokens: 200,
