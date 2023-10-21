@@ -27,7 +27,7 @@ onFormSubmit = e => {
   });
   const openai = new OpenAIApi(configuration);
 
-  openai.createCompletion("gpt-3.5-turbo-0613", {
+  openai.createCompletion("text-davinci-003", {
     prompt: `Write a detailed, smart, informative and professional product description for ${formDataObj.productName}`,
     temperature: 0.8,
     max_tokens: 200,
